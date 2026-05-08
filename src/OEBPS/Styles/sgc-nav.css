@@ -6,6 +6,10 @@ nav#page-list {
     display:none;
 }
 
+nav {
+	display:none;
+}
+
 ol {
     list-style-type: none;
 }

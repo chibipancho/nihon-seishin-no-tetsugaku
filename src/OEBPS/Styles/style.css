@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/* 縦書きの基本設定 */
+html {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -epub-writing-mode: vertical-rl;
+}
+
+body {
+  margin: 3% 5%;
+  font-family:
+    "Noto Serif JP",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    "MS Mincho",
+    serif;
+
+/*  font-family: "Hiragino Mincho ProN", "MS Mincho", serif; */
+}
+
+h2 {
+  /* 1. サイズを控えめにする（1.2〜1.3倍くらいが上品です） */
+  font-size: 1.3em !important;
+  
+  /* 2. 太字の設定 */
+  /* font-weight: bold; */
+  font-weight: normal;
+
+  /* 3. 配置（中央寄せにする場合） */
+  /* text-align: center; */
+/* 上側（進行方向の前）に5文字分の余白を作る */
+  margin-top: 5em;
+
+  /* 4. 余白（縦書きなので、右側が「前」の余白になります） */
+  margin-right: 3em; 
+  margin-left: 2em;
+
+  /* 5. 行間 */
+  line-height: 1.5;
+
+  display: block;
+}
+
+/* 節番号（見出し）の設定 */
+h3 {
+/* 1. フォントの種類（縦書き用のゴシック体を優先） */
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "YuGothic", "Meiryo", "sans-serif";
+
+/* 2. 縦書きであることを再認識させる（重要） */
+  -epub-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+
+/* 3. 太字とサイズ */
+/*  font-weight: bold; */
+  font-weight: normal;
+  font-size: 1.1em;
+
+/* 4. 余白と配置 */
+  margin-right: 2em;   /* 縦書きなので「上」ではなく「右」が前後の余白になります */
+  margin-left: 1em;
+/*  text-align: center; */
+
+/* 上側（進行方向の前）に5文字分の余白を作る */
+  margin-top: 5em;
+/*
+  font-family: "sans-serif" !important;
+  font-size: 1.1em;
+  font-weight: normal;
+  text-align: left; /* 上（天）寄せ 
+  margin: 0;
+  line-height: 1.2;
+*/}
+
+/* 本文の設定 */
+p {
+  margin: 0;
+/*  line-height: 2.2em;	/* 行の間隔（標準は1.2〜1.5程度） */
+  line-height: 1.8em;	/* 行の間隔（標準は1.2〜1.5程度） */
+  margin-top: 0.5em;    /* 段落の上の余白 */
+  margin-bottom: 0.5em; /* 段落の下の余白 */
+  text-indent: 1em;
+  text-align: justify;	/* 文末を綺麗に揃える（おすすめ） */
+/*  font-family: "serif"; /* これが「明朝体」の指定になります */
+  font-family: "Hiragino Mincho ProN", "MS Mincho", "serif";
+}
+
+/* 空行（一行あき）の設定 */
+p.blank {
+  text-indent: 0;
+  line-height: 1.0em;
+}
+
+/* 序文などの署名・日付用（下寄せ） */
+p.signature {
+  text-align: right;
+  text-indent: 0;
+  margin-top: 2em;
+}
+
+/* ゴマ点（おすすめ） */
+.em-filled-sesame {
+  -webkit-text-emphasis-style: filled sesame;
+  text-emphasis-style: filled sesame;
+}
+
+/* 丸点（一般的な傍点） */
+.em-filled_dot {
+  -webkit-text-emphasis-style: filled dot;
+  text-emphasis-style: filled dot;
+}
+
+.em-open-dot {
+  /* 白抜きの丸（○）を指定 */
+  -webkit-text-emphasis-style: open dot;
+  text-emphasis-style: open dot;
+
+  /* 縦書きで文字の右側に配置 */
+  -webkit-text-emphasis-position: over right;
+  text-emphasis-position: over right;
+}
+
+.em-open-triangle {
+  -webkit-text-emphasis-style: open triangle;
+  text-emphasis-style: open triangle;
+
+  -webkit-text-emphasis-position: over right;
+  text-emphasis-position: over right;
+}
+
+.center-text {
+  text-align: center;   /* 真ん中に寄せる */
+  text-indent: 0;       /* 1文字下げを強制解除 */
+  margin: 1em 0;        /* 前後の文章との隙間（1行分） */
+  line-height: 1;       /* 余計な高さを出さない */
+}
+
+<!--
+/* 短歌全体のブロック */
+.tanka-box {
+  display: inline-block; /* ★これがKindleには効きます */           
+
+  margin-left: 2em;   /* 前後の本文との「行間」を空ける（縦書きなので左側に隙間） */
+  margin-right: 2em;  /* 右側の本文との間隔 */
+
+/* ★これを追加！改ページを禁止する命令 */
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 上の句（一行目） */
+.tanka-line {
+  display: block;
+  margin-top: 3em;    /* ★「一文字分」上を空けて下げます */
+	margin-left: 0.5em;   /* ★ここ！この数字を大きくすると、次の行が左へ逃げます */
+}
+
+/* 下の句（二行目） */
+.indent {
+  display: block;
+  margin-top: 5em;    /* ★「三文字分」上を空けて、一行目よりさらに下げます */
+}
+-->
+
+.tanka-fixed {
+  display: block;
+  white-space: nowrap; /* ★これが強力：一行を折り返させない */
+  line-height: 2;
+  margin-right: 2em;
+  margin-left: 2em;    /* 本文との間隔 */
+}
+
+
+
+table.colophon td,
+table.colophon th {
+ /* vertical-align: top; */
+  font-weight: normal;
+  writing-mode: vertical-rl;
+
+  vertical-align: top;
+  text-align: left;
+/*
+  padding: 0.5em;
+*/}
+
+/*table.colophon-small *,
+table.colophon-small p {
+*/
+table.colophon-small th,
+table.colophon-small td
+{
+  font-weight: normal;
+  font-size: 65% !important;
+  writing-mode: vertical-rl;
+
+  vertical-align: top;
+  text-align: left;
+}
