@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+@font-face {
+	font-family: "NotoSerifJP";
+	src: url("../Fonts/NotoSerifJP-Regular.ttf");
+}
+
+@font-face {
+	font-family: "NotoSansJP";
+	src: url("../Fonts/NotoSansJP-Regular.ttf");
+}
+
 /* 縦書きの基本設定 */
 html {
   writing-mode: vertical-rl;
@@ -10,13 +20,13 @@ html {
 body {
   margin: 3% 5%;
   font-family:
-    "Noto Serif JP",
+    "NotoSerifJP", serif;
+/*
     "Hiragino Mincho ProN",
     "Yu Mincho",
     "MS Mincho",
     serif;
-
-/*  font-family: "Hiragino Mincho ProN", "MS Mincho", serif; */
+*/
 }
 
 h2 {
@@ -45,7 +55,7 @@ h2 {
 /* 節番号（見出し）の設定 */
 h3 {
 /* 1. フォントの種類（縦書き用のゴシック体を優先） */
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "YuGothic", "Meiryo", "sans-serif";
+  font-family: "NotoSansJP", sans-serif;
 
 /* 2. 縦書きであることを再認識させる（重要） */
   -epub-writing-mode: vertical-rl;
@@ -63,14 +73,7 @@ h3 {
 
 /* 上側（進行方向の前）に5文字分の余白を作る */
   margin-top: 5em;
-/*
-  font-family: "sans-serif" !important;
-  font-size: 1.1em;
-  font-weight: normal;
-  text-align: left; /* 上（天）寄せ 
-  margin: 0;
-  line-height: 1.2;
-*/}
+}
 
 /* 本文の設定 */
 p {
@@ -82,7 +85,7 @@ p {
   text-indent: 1em;
   text-align: justify;	/* 文末を綺麗に揃える（おすすめ） */
 /*  font-family: "serif"; /* これが「明朝体」の指定になります */
-  font-family: "Hiragino Mincho ProN", "MS Mincho", "serif";
+  font-family: "NotoSerifJP", serif;
 }
 
 /* 空行（一行あき）の設定 */
@@ -180,13 +183,9 @@ table.colophon th {
 
   vertical-align: top;
   text-align: left;
-/*
-  padding: 0.5em;
-*/}
+}
 
-/*table.colophon-small *,
-table.colophon-small p {
-*/
+
 table.colophon-small th,
 table.colophon-small td
 {
