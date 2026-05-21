@@ -4,7 +4,7 @@
     <dc:language>ja</dc:language>
     <dc:title>日本精神の哲学</dc:title>
     <dc:rights>Licensed under CC0 1.0</dc:rights>
-    <meta property="dcterms:modified">2026-05-08T22:01:40Z</meta>
+    <meta property="dcterms:modified">2026-05-16T22:18:35Z</meta>
     <dc:creator id="creator">鹿子木員信</dc:creator>
     <meta refines="#creator" property="file-as">カノコギカズノブ</meta>
     <dc:identifier id="BookId">urn:uuid:9c20c8a5-aa98-415c-9a94-4660d98169ca</dc:identifier>
@@ -17,6 +17,8 @@
     <item id="Style0001.css" href="Styles/style.css" media-type="text/css"/>
     <item id="Section0002.xhtml" href="Text/colophon.xhtml" media-type="application/xhtml+xml"/>
     <item id="x3cc26c9f-6adc-404e-b579-eb7d40596afb" href="Text/cover-text.xhtml" media-type="application/xhtml+xml"/>
+    <item id="NotoSerifJP-Regular.ttf" href="Fonts/NotoSerifJP-Regular.ttf" media-type="font/ttf"/>
+    <item id="NotoSansJP-Regular.ttf" href="Fonts/NotoSansJP-Regular.ttf" media-type="font/ttf"/>
   </manifest>
   <spine page-progression-direction="rtl">
     <itemref idref="x3cc26c9f-6adc-404e-b579-eb7d40596afb"/>
